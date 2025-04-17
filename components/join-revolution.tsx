@@ -72,4 +72,3 @@ export function JoinRevolution() {
     </section>
   )
 }
-
