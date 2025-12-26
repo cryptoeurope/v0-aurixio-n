@@ -1,108 +1,126 @@
+import { Card } from "@/components/ui/card"
+import { CheckCircle2, Circle } from "lucide-react"
+
 export function Roadmap() {
   return (
-    <section id="roadmap" className="py-20 bg-dark-900">
+    <section id="roadmap" className="py-24 bg-[#0d1425]">
       <div className="container px-4 md:px-6">
         <div className="text-center mb-16">
-          <h2 className="text-3xl md:text-4xl font-bold mb-4 text-white">Our Roadmap</h2>
-          <p className="text-lg text-gray-300 max-w-3xl mx-auto">
-            The journey to revolutionize decentralized finance through AI-powered investment strategies and community
-            governance.
+          <h2 className="text-3xl md:text-5xl font-bold mb-4 text-white">Roadmap</h2>
+          <p className="text-lg text-gray-400 max-w-2xl mx-auto leading-relaxed">
+            Our structured approach to scaling professional capital management.
           </p>
         </div>
 
-        <div className="max-w-4xl mx-auto">
-          <div className="space-y-12 relative">
-            <div className="absolute left-1/2 top-0 bottom-0 w-0.5 bg-gradient-to-b from-teal-400 to-blue-500 transform -translate-x-1/2"></div>
-
-            <div className="relative">
-              <div className="absolute left-1/2 top-0 w-8 h-8 bg-teal-400 rounded-full transform -translate-x-1/2 flex items-center justify-center">
-                <div className="w-4 h-4 bg-dark-900 rounded-full"></div>
-              </div>
-
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-8 pt-12">
-                <div className="bg-dark-700 p-6 rounded-lg md:text-right md:mr-8">
-                  <h3 className="text-xl font-bold mb-2 text-teal-400">Q1 2025</h3>
-                  <h4 className="text-lg font-bold mb-3 text-white">Foundation Phase</h4>
-                  <ul className="space-y-2 text-gray-300 list-disc md:list-none pl-5 md:pl-0">
-                    <li>Concept development and market research</li>
-                    <li>Core team formation</li>
-                    <li>Initial whitepaper draft</li>
-                  </ul>
+        <div className="max-w-4xl mx-auto space-y-6">
+          {/* Phase 1 - Current */}
+          <Card className="bg-[#0a0f1a] border-cyan-500 p-8">
+            <div className="flex items-start gap-4">
+              <CheckCircle2 className="w-8 h-8 text-cyan-400 flex-shrink-0 mt-1" />
+              <div className="flex-1">
+                <div className="flex items-center gap-3 mb-3">
+                  <h3 className="text-2xl font-bold text-white">Phase 1: Live Funds & Transparency</h3>
+                  <span className="px-3 py-1 bg-cyan-500 rounded-full text-xs font-medium text-white">CURRENT</span>
                 </div>
-                <div className="md:ml-8 hidden md:block"></div>
+                <ul className="space-y-2 text-gray-300">
+                  <li className="flex items-center gap-2">
+                    <span className="w-1.5 h-1.5 bg-cyan-400 rounded-full"></span>
+                    Multiple active funds with verified performance
+                  </li>
+                  <li className="flex items-center gap-2">
+                    <span className="w-1.5 h-1.5 bg-cyan-400 rounded-full"></span>
+                    Monthly reporting and transparent metrics
+                  </li>
+                  <li className="flex items-center gap-2">
+                    <span className="w-1.5 h-1.5 bg-cyan-400 rounded-full"></span>
+                    Professional risk management protocols
+                  </li>
+                </ul>
               </div>
             </div>
+          </Card>
 
-            <div className="relative">
-              <div className="absolute left-1/2 top-0 w-8 h-8 bg-blue-400 rounded-full transform -translate-x-1/2 flex items-center justify-center">
-                <div className="w-4 h-4 bg-dark-900 rounded-full"></div>
-              </div>
-
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-8 pt-12">
-                <div className="md:mr-8 hidden md:block"></div>
-                <div className="bg-dark-700 p-6 rounded-lg md:ml-8">
-                  <h3 className="text-xl font-bold mb-2 text-blue-400">Q2 2025</h3>
-                  <h4 className="text-lg font-bold mb-3 text-white">Development Phase</h4>
-                  <ul className="space-y-2 text-gray-300 list-disc pl-5">
-                    <li>Platform architecture design</li>
-                    <li>Smart contract development</li>
-                    <li>AI algorithm prototype</li>
-                    <li>Security audit preparations</li>
-                  </ul>
-                </div>
-              </div>
-            </div>
-
-            <div className="relative">
-              <div className="absolute left-1/2 top-0 w-8 h-8 bg-teal-400 rounded-full transform -translate-x-1/2 flex items-center justify-center">
-                <div className="w-4 h-4 bg-dark-900 rounded-full"></div>
-              </div>
-
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-8 pt-12">
-                <div className="bg-dark-700 p-6 rounded-lg md:text-right md:mr-8">
-                  <h3 className="text-xl font-bold mb-2 text-teal-400">Q3 2025</h3>
-                  <h4 className="text-lg font-bold mb-3 text-white">Launch Phase</h4>
-                  <ul className="space-y-2 text-gray-300 list-disc md:list-none pl-5 md:pl-0">
-                    <li>Initial DEX Offering (IDO)</li>
-                    <li>Mainnet launch</li>
-                    <li>Governance system activation</li>
-                  </ul>
-                </div>
-                <div className="md:ml-8 hidden md:block"></div>
+          {/* Phase 2 */}
+          <Card className="bg-[#0a0f1a] border-gray-800 p-8">
+            <div className="flex items-start gap-4">
+              <Circle className="w-8 h-8 text-gray-600 flex-shrink-0 mt-1" />
+              <div className="flex-1">
+                <h3 className="text-2xl font-bold text-white mb-3">Phase 2: Scaling & Automation</h3>
+                <ul className="space-y-2 text-gray-400">
+                  <li className="flex items-center gap-2">
+                    <span className="w-1.5 h-1.5 bg-gray-600 rounded-full"></span>
+                    Increase AUM across all fund strategies
+                  </li>
+                  <li className="flex items-center gap-2">
+                    <span className="w-1.5 h-1.5 bg-gray-600 rounded-full"></span>
+                    Enhanced automation and execution systems
+                  </li>
+                  <li className="flex items-center gap-2">
+                    <span className="w-1.5 h-1.5 bg-gray-600 rounded-full"></span>
+                    Expanded market coverage and strategies
+                  </li>
+                </ul>
               </div>
             </div>
+          </Card>
 
-            <div className="relative">
-              <div className="absolute left-1/2 top-0 w-8 h-8 bg-blue-400 rounded-full transform -translate-x-1/2 flex items-center justify-center">
-                <div className="w-4 h-4 bg-dark-900 rounded-full"></div>
-              </div>
-
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-8 pt-12">
-                <div className="md:mr-8 hidden md:block"></div>
-                <div className="bg-dark-700 p-6 rounded-lg md:ml-8">
-                  <h3 className="text-xl font-bold mb-2 text-blue-400">Q4 2025</h3>
-                  <h4 className="text-lg font-bold mb-3 text-white">Expansion Phase</h4>
-                  <ul className="space-y-2 text-gray-300 list-disc pl-5">
-                    <li>Advanced AI strategy implementation</li>
-                    <li>Cross-chain integration</li>
-                    <li>Global expansion initiatives</li>
-                  </ul>
-                </div>
+          {/* Phase 3 - Future */}
+          <Card className="bg-[#0a0f1a] border-gray-800 p-8 relative">
+            <div className="absolute top-4 right-4">
+              <span className="px-3 py-1 bg-blue-500/20 border border-blue-500 rounded-full text-xs font-medium text-blue-400">
+                FUTURE
+              </span>
+            </div>
+            <div className="flex items-start gap-4">
+              <Circle className="w-8 h-8 text-gray-600 flex-shrink-0 mt-1" />
+              <div className="flex-1">
+                <h3 className="text-2xl font-bold text-white mb-3">Phase 3: Tokenization</h3>
+                <ul className="space-y-2 text-gray-400">
+                  <li className="flex items-center gap-2">
+                    <span className="w-1.5 h-1.5 bg-gray-600 rounded-full"></span>
+                    Introduce tokenized fund shares
+                  </li>
+                  <li className="flex items-center gap-2">
+                    <span className="w-1.5 h-1.5 bg-gray-600 rounded-full"></span>
+                    Smart contract integration for transparency
+                  </li>
+                  <li className="flex items-center gap-2">
+                    <span className="w-1.5 h-1.5 bg-gray-600 rounded-full"></span>
+                    Community governance mechanisms
+                  </li>
+                </ul>
               </div>
             </div>
-          </div>
+          </Card>
 
-          <div className="mt-12 text-center">
-            <a
-              href="/roadmap"
-              className="inline-flex items-center text-teal-400 hover:text-teal-300 transition-colors text-lg font-medium"
-            >
-              View Full Roadmap
-              <svg className="ml-2 w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M14 5l7 7m0 0l-7 7m7-7H3" />
-              </svg>
-            </a>
-          </div>
+          {/* Phase 4 - Future */}
+          <Card className="bg-[#0a0f1a] border-gray-800 p-8 relative">
+            <div className="absolute top-4 right-4">
+              <span className="px-3 py-1 bg-blue-500/20 border border-blue-500 rounded-full text-xs font-medium text-blue-400">
+                FUTURE
+              </span>
+            </div>
+            <div className="flex items-start gap-4">
+              <Circle className="w-8 h-8 text-gray-600 flex-shrink-0 mt-1" />
+              <div className="flex-1">
+                <h3 className="text-2xl font-bold text-white mb-3">Phase 4: On-Chain Elements</h3>
+                <ul className="space-y-2 text-gray-400">
+                  <li className="flex items-center gap-2">
+                    <span className="w-1.5 h-1.5 bg-gray-600 rounded-full"></span>
+                    Optional blockchain settlement
+                  </li>
+                  <li className="flex items-center gap-2">
+                    <span className="w-1.5 h-1.5 bg-gray-600 rounded-full"></span>
+                    Decentralized audit trails
+                  </li>
+                  <li className="flex items-center gap-2">
+                    <span className="w-1.5 h-1.5 bg-gray-600 rounded-full"></span>
+                    Cross-chain liquidity options
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </Card>
         </div>
       </div>
     </section>

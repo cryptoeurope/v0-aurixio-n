@@ -31,8 +31,8 @@ export function Header() {
   }
 
   return (
-    <header className="sticky top-0 z-50 w-full border-b border-dark-700/30 bg-dark-900/70 backdrop-blur-md">
-      <div className="container flex h-32 items-center justify-between px-6 md:px-8">
+    <header className="sticky top-0 z-50 w-full border-b border-gray-800/50 bg-[#0a0f1a]/90 backdrop-blur-md">
+      <div className="container flex h-20 items-center justify-between px-6 md:px-8">
         <div className="flex items-center">
           <a
             href="/"
@@ -49,7 +49,7 @@ export function Header() {
               }
             }}
           >
-            <div className="relative h-20 w-56">
+            <div className="relative h-12 w-32">
               <Image
                 src="/images/aurixion-full-logo-with-text.png"
                 alt="Aurixion Logo"
@@ -63,63 +63,49 @@ export function Header() {
           </a>
         </div>
 
-        <nav className="hidden md:flex items-center gap-10">
+        <nav className="hidden md:flex items-center gap-8">
           <a
-            href="/#features"
-            onClick={(e) => scrollToSection(e, "features")}
-            className="text-lg font-medium text-gray-200 hover:text-teal-400 transition-colors cursor-pointer"
+            href="#active-funds"
+            onClick={(e) => scrollToSection(e, "active-funds")}
+            className="text-sm font-medium text-gray-300 hover:text-cyan-400 transition-colors cursor-pointer"
           >
-            Features
+            Funds
           </a>
           <a
-            href="/#investment"
-            onClick={(e) => scrollToSection(e, "investment")}
-            className="text-lg font-medium text-gray-200 hover:text-teal-400 transition-colors cursor-pointer"
+            href="#performance"
+            onClick={(e) => scrollToSection(e, "performance")}
+            className="text-sm font-medium text-gray-300 hover:text-cyan-400 transition-colors cursor-pointer"
           >
-            Investment
+            Performance
           </a>
           <a
-            href="/#how-it-works"
+            href="#how-it-works"
             onClick={(e) => scrollToSection(e, "how-it-works")}
-            className="text-lg font-medium text-gray-200 hover:text-teal-400 transition-colors cursor-pointer"
+            className="text-sm font-medium text-gray-300 hover:text-cyan-400 transition-colors cursor-pointer"
           >
             How It Works
           </a>
           <a
-            href="/#governance"
-            onClick={(e) => scrollToSection(e, "governance")}
-            className="text-lg font-medium text-gray-200 hover:text-teal-400 transition-colors cursor-pointer"
-          >
-            Governance
-          </a>
-          <a
-            href="/#roadmap"
+            href="#roadmap"
             onClick={(e) => scrollToSection(e, "roadmap")}
-            className="text-lg font-medium text-gray-200 hover:text-teal-400 transition-colors cursor-pointer"
+            className="text-sm font-medium text-gray-300 hover:text-cyan-400 transition-colors cursor-pointer"
           >
             Roadmap
           </a>
-          <a
-            href="/#education"
-            onClick={(e) => scrollToSection(e, "education")}
-            className="text-lg font-medium text-gray-200 hover:text-teal-400 transition-colors cursor-pointer"
-          >
-            Education
-          </a>
         </nav>
 
-        <div className="hidden md:flex items-center gap-6">
+        <div className="hidden md:flex items-center gap-4">
           <Link
-            href="/explore"
-            className="border-2 border-teal-400 text-teal-400 hover:bg-dark-700/70 px-6 py-3 rounded-md text-lg font-medium"
+            href="/ido-project"
+            className="bg-gradient-to-r from-cyan-500 to-blue-500 text-white hover:from-cyan-600 hover:to-blue-600 px-5 py-2 rounded-md text-sm font-medium transition-colors"
           >
-            Explore
+            IDO Project
           </Link>
           <Link
-            href="/join-ido"
-            className="bg-gradient-to-r from-teal-400 to-blue-500 text-white hover:from-teal-500 hover:to-blue-600 px-6 py-3 rounded-md text-lg font-medium"
+            href="/contact"
+            className="border border-cyan-500 text-cyan-400 hover:bg-cyan-500/10 px-5 py-2 rounded-md text-sm font-medium transition-colors"
           >
-            Join IDO
+            Investor Access
           </Link>
         </div>
 
@@ -129,64 +115,50 @@ export function Header() {
       </div>
 
       {isMenuOpen && (
-        <div className="md:hidden absolute top-32 left-0 right-0 bg-dark-800/90 border-b border-dark-700/30 shadow-lg backdrop-blur-md">
-          <div className="container px-6 py-6 flex flex-col gap-6">
+        <div className="md:hidden absolute top-20 left-0 right-0 bg-[#0d1425]/95 border-b border-gray-800/50 shadow-lg backdrop-blur-md">
+          <div className="container px-6 py-6 flex flex-col gap-4">
             <a
-              href="/#features"
-              onClick={(e) => scrollToSection(e, "features")}
-              className="text-lg font-medium p-3 text-gray-200 hover:bg-dark-700/70 hover:text-white rounded cursor-pointer"
+              href="#active-funds"
+              onClick={(e) => scrollToSection(e, "active-funds")}
+              className="text-sm font-medium p-3 text-gray-300 hover:bg-gray-800/50 hover:text-cyan-400 rounded cursor-pointer transition-colors"
             >
-              Features
+              Funds
             </a>
             <a
-              href="/#investment"
-              onClick={(e) => scrollToSection(e, "investment")}
-              className="text-lg font-medium p-3 text-gray-200 hover:bg-dark-700/70 hover:text-white rounded cursor-pointer"
+              href="#performance"
+              onClick={(e) => scrollToSection(e, "performance")}
+              className="text-sm font-medium p-3 text-gray-300 hover:bg-gray-800/50 hover:text-cyan-400 rounded cursor-pointer transition-colors"
             >
-              Investment
+              Performance
             </a>
             <a
-              href="/#how-it-works"
+              href="#how-it-works"
               onClick={(e) => scrollToSection(e, "how-it-works")}
-              className="text-lg font-medium p-3 text-gray-200 hover:bg-dark-700/70 hover:text-white rounded cursor-pointer"
+              className="text-sm font-medium p-3 text-gray-300 hover:bg-gray-800/50 hover:text-cyan-400 rounded cursor-pointer transition-colors"
             >
               How It Works
             </a>
             <a
-              href="/#governance"
-              onClick={(e) => scrollToSection(e, "governance")}
-              className="text-lg font-medium p-3 text-gray-200 hover:bg-dark-700/70 hover:text-white rounded cursor-pointer"
-            >
-              Governance
-            </a>
-            <a
-              href="/#roadmap"
+              href="#roadmap"
               onClick={(e) => scrollToSection(e, "roadmap")}
-              className="text-lg font-medium p-3 text-gray-200 hover:bg-dark-700/70 hover:text-white rounded cursor-pointer"
+              className="text-sm font-medium p-3 text-gray-300 hover:bg-gray-800/50 hover:text-cyan-400 rounded cursor-pointer transition-colors"
             >
               Roadmap
             </a>
-            <a
-              href="/#education"
-              onClick={(e) => scrollToSection(e, "education")}
-              className="text-lg font-medium p-3 text-gray-200 hover:bg-dark-700/70 hover:text-white rounded cursor-pointer"
-            >
-              Education
-            </a>
-            <div className="flex flex-col gap-4 pt-4 border-t border-dark-600">
+            <div className="flex flex-col gap-3 pt-4 border-t border-gray-800">
               <Link
-                href="/explore"
-                className="border-2 border-teal-400 text-teal-400 w-full p-3 rounded-md text-center text-lg font-medium"
+                href="/ido-project"
+                className="bg-gradient-to-r from-cyan-500 to-blue-500 text-white w-full p-3 rounded-md text-center text-sm font-medium"
                 onClick={() => setIsMenuOpen(false)}
               >
-                Explore
+                IDO Project
               </Link>
               <Link
-                href="/join-ido"
-                className="bg-gradient-to-r from-teal-400 to-blue-500 text-white w-full p-3 rounded-md text-center text-lg font-medium"
+                href="/contact"
+                className="border border-cyan-500 text-cyan-400 w-full p-3 rounded-md text-center text-sm font-medium"
                 onClick={() => setIsMenuOpen(false)}
               >
-                Join IDO
+                Investor Access
               </Link>
             </div>
           </div>

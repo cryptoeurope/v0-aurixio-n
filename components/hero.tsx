@@ -1,50 +1,44 @@
-import Image from "next/image"
+import { Button } from "@/components/ui/button"
 import Link from "next/link"
 
 export function Hero() {
   return (
-    <section className="relative min-h-screen flex flex-col items-center justify-center overflow-hidden py-10">
-      {/* Background image */}
-      <div className="absolute inset-0 z-0">
-        <Image
-          src="/images/aurixion-hero-background.png"
-          alt="Aurixion background"
-          fill
-          priority
-          className="object-cover object-center"
-        />
-        {/* Very subtle overlay to ensure content visibility */}
-        <div className="absolute inset-0 bg-dark-900/10 backdrop-blur-[1px]"></div>
-      </div>
+    <section className="relative min-h-screen flex items-center justify-center py-20">
+      {/* Subtle gradient background */}
+      <div className="absolute inset-0 bg-gradient-to-b from-[#0a0f1a] via-[#0d1425] to-[#0a0f1a]"></div>
 
-      <div className="container relative z-10 px-4 md:px-6 flex flex-col items-center justify-center">
-        <div className="flex flex-col items-center justify-center">
-          {/* Logo container with extreme negative margin to pull buttons up into the red zone */}
-          <div className="relative w-[90vw] h-[60vh] md:w-[90vw] md:h-[70vh] lg:w-[90vw] lg:h-[75vh] mb-[-120px]">
-            <Image
-              src="/images/aurixion-full-logo-with-text.png"
-              alt="Aurixion Logo"
-              fill
-              className="object-contain"
-              style={{
-                backgroundColor: "transparent",
-              }}
-            />
-          </div>
+      <div className="container relative z-10 px-4 md:px-6">
+        <div className="max-w-4xl mx-auto text-center space-y-8">
+          {/* Professional headline focused on performance */}
+          <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold tracking-tight text-balance">
+            Real Fund Performance.
+            <br />
+            <span className="text-cyan-400">Transparent Risk.</span>
+            <br />
+            Professional Capital Management.
+          </h1>
 
-          {/* Buttons positioned in the red zone, directly below the tagline */}
-          <div className="flex flex-col sm:flex-row gap-6 justify-center relative z-10">
-            <Link
-              href="/join-ido"
-              className="bg-gradient-to-r from-teal-400 to-blue-500 text-white hover:from-teal-500 hover:to-blue-600 px-12 py-6 h-auto text-xl font-medium shadow-lg rounded-md inline-flex items-center justify-center"
-            >
-              Join the IDO
+          {/* Clear, professional subtext */}
+          <p className="text-lg md:text-xl text-gray-300 max-w-2xl mx-auto leading-relaxed">
+            Multiple active funds delivering performance-first investment strategies. Crypto tokenization is part of our
+            future roadmap.
+          </p>
+
+          {/* Professional CTAs */}
+          <div className="flex flex-col sm:flex-row gap-4 justify-center pt-4">
+            <Link href="#active-funds">
+              <Button size="lg" className="bg-cyan-500 hover:bg-cyan-600 text-white px-8 py-6 text-lg font-medium">
+                View Active Funds
+              </Button>
             </Link>
-            <Link
-              href="/vision"
-              className="border border-teal-400 text-white bg-transparent hover:bg-white/10 px-12 py-6 h-auto text-xl font-medium backdrop-blur-sm rounded-md inline-flex items-center justify-center"
-            >
-              Explore Our Vision
+            <Link href="#performance">
+              <Button
+                size="lg"
+                variant="outline"
+                className="border-cyan-500 text-cyan-400 hover:bg-cyan-500/10 px-8 py-6 text-lg font-medium bg-transparent"
+              >
+                See Performance
+              </Button>
             </Link>
           </div>
         </div>
