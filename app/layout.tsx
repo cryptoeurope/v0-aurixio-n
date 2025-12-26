@@ -13,7 +13,7 @@ export const metadata: Metadata = {
     icon: "/images/aurixion-logo.png",
     apple: "/images/aurixion-logo.png",
   },
-    generator: 'v0.dev'
+    generator: 'v0.app'
 }
 
 export default function RootLayout({
@@ -31,6 +31,3 @@ export default function RootLayout({
     </html>
   )
 }
-
-
-import './globals.css'
